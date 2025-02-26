@@ -5,14 +5,12 @@
       "type": "motoko"
     },
     "test_frontend": {
-      "dependencies": [
-        "test_backend"
-      ],
-      "source": [
-        "src/test_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "test_frontend"
+      "dependencies": ["test_backend"],
+      "frontend": {
+        "entrypoint": "src/test_frontend/src/main.jsx"
+      },
+      "source": ["src/test_frontend/dist"],
+      "type": "assets"
     }
   },
   "defaults": {
