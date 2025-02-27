@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Menu, X, Bell } from 'lucide-react';
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
-    const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -27,11 +27,9 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button 
-                onClick={() => navigate("/dashboard")}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">
-              Get Started
-            </button>
+            <Link to="/dashboard" className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+              Dashboard
+            </Link>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             <button
@@ -65,14 +63,16 @@ const Navbar = () => {
               className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
             >
               FAQ
-
             </a>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="mt-3 space-y-1">
-              <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                Get Started
-              </button>
+              <Link 
+                to="/dashboard"
+                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              >
+                Dashboard
+              </Link>
             </div>
           </div>
         </div>
