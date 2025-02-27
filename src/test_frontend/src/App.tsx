@@ -7,7 +7,7 @@ import Features from './components/Features';
 import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
-
+import HowItWorks from './components/HowItWorks';
 function App() {
   return (
     <Router>
@@ -19,6 +19,7 @@ function App() {
               <Navbar />
               <Hero />
               <Features />
+              <HowItWorks/>
               <Pricing />
               <Footer />
             </>
