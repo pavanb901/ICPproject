@@ -8,8 +8,9 @@ import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 import DiscordChannels from './components/DiscordChannels';
+import Notifications from './components/Notifications';
+import Settings from './components/Settings';
 import HowItWorks from './components/HowItWorks';
-
 function App() {
   return (
     <Router>
@@ -17,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/discord-channels" element={<DiscordChannels />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/" element={
             <>
               <Navbar />
