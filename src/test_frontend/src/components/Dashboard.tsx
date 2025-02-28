@@ -28,6 +28,7 @@ import {
   Bar
 } from 'recharts';
 import { Link } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 // Sample data for charts
 const salesData = [
@@ -97,108 +98,13 @@ const Dashboard = () => {
       {/* Mobile sidebar */}
       <div className={`fixed inset-0 z-40 flex md:hidden ${sidebarOpen ? 'visible' : 'invisible'}`}>
         <div className={`fixed inset-0 bg-gray-600 bg-opacity-75 transition-opacity ${sidebarOpen ? 'opacity-100 ease-out duration-300' : 'opacity-0 ease-in duration-200'}`} onClick={() => setSidebarOpen(false)}></div>
-        <div className={`relative flex-1 flex flex-col max-w-xs w-full bg-indigo-700 transform ${sidebarOpen ? 'translate-x-0 ease-out duration-300' : '-translate-x-full ease-in duration-200'}`}>
-          <div className="absolute top-0 right-0 -mr-12 pt-2">
-            <button
-              className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              onClick={() => setSidebarOpen(false)}
-            >
-              <span className="sr-only">Close sidebar</span>
-              <X className="h-6 w-6 text-white" />
-            </button>
-          </div>
-          <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-            <div className="flex-shrink-0 flex items-center px-4">
-              <Bell className="h-8 w-8 text-white" />
-              <span className="ml-2 text-xl font-bold text-white">AllInfo</span>
-            </div>
-            <nav className="mt-5 px-2 space-y-1">
-              <a href="#" className="bg-indigo-800 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                <Home className="mr-4 h-6 w-6" />
-                Dashboard
-              </a>
-              <a href="#" className="text-white hover:bg-indigo-600 group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                <MessageSquare className="mr-4 h-6 w-6" />
-                Discord Channels
-              </a>
-              <a href="#" className="text-white hover:bg-indigo-600 group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                <Bell className="mr-4 h-6 w-6" />
-                Notifications
-              </a>
-              <a href="#" className="text-white hover:bg-indigo-600 group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                <Settings className="mr-4 h-6 w-6" />
-                Settings
-              </a>
-            </nav>
-          </div>
-          <div className="flex-shrink-0 flex border-t border-indigo-800 p-4">
-            <Link to="/" className="flex-shrink-0 group block">
-              <div className="flex items-center">
-                <div>
-                  <img
-                    className="inline-block h-10 w-10 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                </div>
-                <div className="ml-3">
-                  <p className="text-base font-medium text-white">Tom Cook</p>
-                  <p className="text-sm font-medium text-indigo-200 group-hover:text-white">View profile</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
+        <Sidebar mobile={true} setSidebarOpen={setSidebarOpen} />
         <div className="flex-shrink-0 w-14"></div>
       </div>
 
       {/* Static sidebar for desktop */}
       <div className="hidden md:flex md:flex-shrink-0">
-        <div className="flex flex-col w-64">
-          <div className="flex-1 flex flex-col min-h-0 bg-indigo-700">
-            <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-              <div className="flex items-center flex-shrink-0 px-4">
-                <Bell className="h-8 w-8 text-white" />
-                <span className="ml-2 text-xl font-bold text-white">AllInfo</span>
-              </div>
-              <nav className="mt-5 flex-1 px-2 space-y-1">
-                <a href="#" className="bg-indigo-800 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                  <Home className="mr-3 h-6 w-6" />
-                  Dashboard
-                </a>
-                <a href="#" className="text-white hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                  <MessageSquare className="mr-3 h-6 w-6" />
-                  Discord Channels
-                </a>
-                <a href="#" className="text-white hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                  <Bell className="mr-3 h-6 w-6" />
-                  Notifications
-                </a>
-                <a href="#" className="text-white hover:bg-indigo-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                  <Settings className="mr-3 h-6 w-6" />
-                  Settings
-                </a>
-              </nav>
-            </div>
-            <div className="flex-shrink-0 flex border-t border-indigo-800 p-4">
-              <Link to="/" className="flex-shrink-0 w-full group block">
-                <div className="flex items-center">
-                  <div>
-                    <img
-                      className="inline-block h-9 w-9 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-white">Tom Cook</p>
-                    <p className="text-xs font-medium text-indigo-200 group-hover:text-white">View profile</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Sidebar mobile={false} />
       </div>
 
       <div className="flex flex-col w-0 flex-1 overflow-hidden">

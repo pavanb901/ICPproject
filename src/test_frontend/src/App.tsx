@@ -7,13 +7,16 @@ import Features from './components/Features';
 import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
+import DiscordChannels from './components/DiscordChannels';
 import HowItWorks from './components/HowItWorks';
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/discord-channels" element={<DiscordChannels />} />
           <Route path="/" element={
             <>
               <Navbar />
@@ -31,4 +34,3 @@ function App() {
 }
 
 export default App;
-
