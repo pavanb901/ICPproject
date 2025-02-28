@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-
+import img1 from "./dashboardimage.png"
 const steps = [
   {
     id: '01',
@@ -24,7 +24,7 @@ const steps = [
     id: '04',
     title: 'Start receiving notifications',
     description: 'Get real-time alerts in your Discord channels whenever important events occur.',
-    image: 'https://images.unsplash.com/photo-1611224885990-ab7363d7f2a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
   },
 ];
 
