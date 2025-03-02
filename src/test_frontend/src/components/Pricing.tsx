@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
 const tiers = [
@@ -65,19 +66,28 @@ const Pricing = () => {
         </div>
 
         <div className="mt-16 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          {tiers.map((tier) => (
-            <div
+          {tiers.map((tier, index) => (
+            <motion.div
               key={tier.name}
               className={`relative p-8 bg-white border rounded-2xl shadow-sm flex flex-col ${
                 tier.mostPopular
                   ? 'border-indigo-500 ring-2 ring-indigo-500'
                   : 'border-gray-200'
               }`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
             >
               {tier.mostPopular && (
-                <div className="absolute top-0 right-6 -mt-4 bg-indigo-500 rounded-full px-4 py-1 text-xs font-semibold text-white uppercase tracking-wide">
+                <motion.div
+                  className="absolute top-0 right-6 -mt-4 bg-indigo-500 rounded-full px-4 py-1 text-xs font-semibold text-white uppercase tracking-wide"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                >
                   Most popular
-                </div>
+                </motion.div>
               )}
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-gray-900">{tier.name}</h3>
@@ -97,17 +107,18 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              <a
+              <motion.a
                 href="#"
                 className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium ${
                   tier.mostPopular
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                     : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
                 }`}
+                whileHover={{ scale: 1.1 }}
               >
                 {tier.cta}
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
