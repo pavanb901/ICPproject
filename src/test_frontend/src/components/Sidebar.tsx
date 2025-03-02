@@ -4,10 +4,11 @@ import {
   Home, 
   Settings, 
   MessageSquare,
-  X
+  X,
+  Puzzle
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import img1 from "./dashboardimage.png"
+
 interface SidebarProps {
   mobile?: boolean;
   setSidebarOpen?: (open: boolean) => void;
@@ -61,6 +62,13 @@ const Sidebar: React.FC<SidebarProps> = ({ mobile = false, setSidebarOpen }) => 
             Notifications
           </Link>
           <Link 
+            to="/integrations" 
+            className={`${isActive('/integrations') ? 'bg-indigo-800' : 'hover:bg-indigo-600'} text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
+          >
+            <Puzzle className="mr-3 h-6 w-6" />
+            Integrations
+          </Link>
+          <Link 
             to="/settings" 
             className={`${isActive('/settings') ? 'bg-indigo-800' : 'hover:bg-indigo-600'} text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
           >
@@ -75,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ mobile = false, setSidebarOpen }) => 
             <div>
               <img
                 className="inline-block h-9 w-9 rounded-full"
-                src={img1}
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt=""
               />
             </div>

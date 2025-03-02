@@ -11,6 +11,7 @@ import DiscordChannels from './components/DiscordChannels';
 import Notifications from './components/Notifications';
 import Settings from './components/Settings';
 import HowItWorks from './components/HowItWorks';
+import Integrations from './components/Integrations';
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/discord-channels" element={<DiscordChannels />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/integrations" element={<Integrations />} />
           <Route path="/" element={
             <>
               <Navbar />
