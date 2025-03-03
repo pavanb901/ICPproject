@@ -86,7 +86,7 @@ const Footer = () => {
         {/* Copyright */}
         <motion.div className="mt-12 border-t border-gray-700 pt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
           <p className="text-base text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} AllInfo. All rights reserved.
+            &copy; {new Date().getFullYear()} AllInfo. All rights reserved Build by Ujjwal Sinha.
           </p>
         </motion.div>
       </div>

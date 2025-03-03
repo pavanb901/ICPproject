@@ -38,8 +38,8 @@ function App() {
               <Customization/>
               <HowItWorks/>
               <Analytics/>
-              <Connective/>
               <Security/>
+              <Connective/>
               <Pricing />
               <FAQ/>
               <CTA/>

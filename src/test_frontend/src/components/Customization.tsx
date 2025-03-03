@@ -148,15 +148,20 @@ const Customization = () => {
                 Create reusable message templates with dynamic variables that automatically populate with relevant data.
               </p>
               <pre className="bg-white p-3 rounded text-sm text-gray-800 overflow-x-auto">
-                {`{
-  "title": "New {{event_type}}",
-  "description": "{{user_name}} just {{action}}!",
-  "color": "{{status_color}}",
-  "fields": [
-    { "name": "Plan", "value": "{{plan_name}}" },
-    { "name": "Value", "value": "{{amount}}" }
-  ]
-}`}
+                {`await fetch("https://all-info-by-ujjwalsinha.vercel.app/api/v1/events", {
+    method: "POST",
+    body: JSON.stringify({
+      category: "sale",
+      fields: {
+        plan: "PRO",
+        email: "ujjwalsinha418@email.com",
+        amount: 49.00
+      }
+    }),
+    headers: {
+      Authorization: "Bearer <YOUR_API_KEY>"
+    }
+  })`}
               </pre>
             </div>
             
@@ -169,20 +174,19 @@ const Customization = () => {
                 Configure custom webhooks to send data from your application to AllInfo with complete control over the payload structure.
               </p>
               <pre className="bg-white p-3 rounded text-sm text-gray-800 overflow-x-auto">
-                {`curl -X POST https://api.allinfo.com/webhook/YOUR_KEY \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "event": "new_signup",
-    "user": {
-      "name": "Jane Smith",
-      "email": "jane@example.com",
-      "plan": "Enterprise"
-    },
-    "metadata": {
-      "source": "referral",
-      "utm_campaign": "spring_promo"
+                {`await fetch('https://all-info-by-ujjwalsinha.vercel.app//api/events', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+    category: 'sales',
+    fields: {
+      field1: 'value1', // for example: user id
+      field2: 'value2' // for example: user email
     }
-  }'`}
+  })
+})`}
               </pre>
             </div>
           </div>
