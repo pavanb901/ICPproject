@@ -12,6 +12,13 @@ import Notifications from './components/Notifications';
 import Settings from './components/Settings';
 import HowItWorks from './components/HowItWorks';
 import Integrations from './components/Integrations';
+import Connective from './components/Connective';
+import CTA from './components/CTA';
+import FAQ from './components/FAQ';
+import Analytics from './components/Analytics';
+import Customization from './components/Customization';
+import Demo from './components/Demo';
+import Security from './components/Security';
 function App() {
   return (
     <Router>
@@ -26,9 +33,16 @@ function App() {
             <>
               <Navbar />
               <Hero />
+              <Demo/>
               <Features />
+              <Customization/>
               <HowItWorks/>
+              <Analytics/>
+              <Connective/>
+              <Security/>
               <Pricing />
+              <FAQ/>
+              <CTA/>
               <Footer />
             </>
           } />
