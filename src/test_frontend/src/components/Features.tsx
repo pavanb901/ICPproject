@@ -153,18 +153,18 @@ const Features = () => {
                   <div className="flex items-center">
                     <div className="h-10 w-10 rounded-full bg-gray-200 flex-shrink-0"></div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">Alex Morgan</p>
+                      <p className="text-sm font-medium text-gray-900">UJJWAL SINHA</p>
                       <p className="text-sm text-gray-500">CEO, TechFlow</p>
                     </div>
                   </div>
                   <div className="mt-6 pt-6 border-t border-gray-200">
                     <div className="flex justify-between">
                       <div>
-                        <p className="text-2xl font-bold text-indigo-600">78%</p>
+                        <p className="text-2xl font-bold text-indigo-600">88%</p>
                         <p className="text-sm text-gray-500">Faster response time</p>
                       </div>
                       <div>
-                        <p className="text-2xl font-bold text-indigo-600">23%</p>
+                        <p className="text-2xl font-bold text-indigo-600">33%</p>
                         <p className="text-sm text-gray-500">Improved satisfaction</p>
                       </div>
                       <div>

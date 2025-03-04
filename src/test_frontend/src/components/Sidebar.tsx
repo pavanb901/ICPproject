@@ -10,7 +10,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 interface SidebarProps {
   mobile?: boolean;
   setSidebarOpen?: (open: boolean) => void;
@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ mobile = false, setSidebarOpen }) => 
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
+const navigator= useNavigate(); 
   return (
     <div className={`${mobile ? 'relative flex-1 flex flex-col max-w-xs w-full' : 'flex flex-col w-64'} bg-indigo-700`}>
       {mobile && setSidebarOpen && (
@@ -80,6 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({ mobile = false, setSidebarOpen }) => 
           <Link 
             to="/upgrade" 
             className={`${isActive('/upgrade') ? 'bg-indigo-800' : 'hover:bg-indigo-600'} text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
+            onClick={() => navigator("/upgrade")}
           >
             <ArrowUp className="mr-3 h-6 w-6" />
             Upgrade Plan
