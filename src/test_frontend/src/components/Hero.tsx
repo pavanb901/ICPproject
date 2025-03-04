@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Bell } from "lucide-react";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                AllInfo is the easiest way to monitor your SaaS Product.
+               AllInfo is the easiest way to monitor your SaaS Product. Get instant notifications for sales, new users, financial updates or any other event sent directly to your Discord.
               </motion.p>
 
               {/* Buttons */}
@@ -70,8 +71,26 @@ const Hero = () => {
             </motion.div>
           </main>
         </div>
+         {/* Floating notification mockup */}
+         <div className="absolute top-1/4 right-8 bg-white rounded-lg shadow-xl p-4 max-w-xs transform rotate-3 animate-pulse">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
+                  <Bell className="h-6 w-6 text-green-600" />
+                </div>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-gray-900">New Customer!</h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  John Smith just signed up for the Pro plan ($99/mo)
+                </p>
+                <p className="mt-1 text-xs text-gray-400">Just now</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    
   );
 };
 
