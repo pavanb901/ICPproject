@@ -19,6 +19,7 @@ import Analytics from './components/Analytics';
 import Customization from './components/Customization';
 import Demo from './components/Demo';
 import Security from './components/Security';
+import UpgradePlan from './components/UpgradePlan';
 function App() {
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/integrations" element={<Integrations />} />
+          <Route path="/upgrade" element={<UpgradePlan />} />
           <Route path="/" element={
             <>
               <Navbar />
