@@ -20,12 +20,18 @@ import Customization from './components/Customization';
 import Demo from './components/Demo';
 import Security from './components/Security';
 import UpgradePlan from './components/UpgradePlan';
+import ProtectedRoute from './components/ProtectedRoute';
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } />
+        
           <Route path="/discord-channels" element={<DiscordChannels />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/settings" element={<Settings />} />
