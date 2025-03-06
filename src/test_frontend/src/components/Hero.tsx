@@ -25,7 +25,7 @@ const Hero = () => {
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
                 <span className="block xl:inline">Real-Time SaaS Insights,</span>{" "}
-                <span className="block text-indigo-600 xl:inline">Delivered to Your Discord And Platform</span>
+                <span className="block text-indigo-600 xl:inline">Delivered to Your Discord And Other Platform</span>
               </motion.h1>
 
               {/* Subtext */}

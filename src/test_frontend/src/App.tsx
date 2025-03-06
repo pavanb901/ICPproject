@@ -21,7 +21,10 @@ import Demo from './components/Demo';
 import Security from './components/Security';
 import UpgradePlan from './components/UpgradePlan';
 import ProtectedRoute from './components/ProtectedRoute';
+import SalesDetails from './components/SalesDetails';
+import CalendarView from './components/CalendarView';
 function App() {
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
@@ -37,6 +40,8 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/upgrade" element={<UpgradePlan />} />
+          <Route path="/sales" element={<SalesDetails />} />
+          <Route path="/calendar" element={<CalendarView />} />
           <Route path="/" element={
             <>
               <Navbar />
