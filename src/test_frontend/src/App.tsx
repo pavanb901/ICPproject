@@ -23,6 +23,10 @@ import UpgradePlan from './components/UpgradePlan';
 import ProtectedRoute from './components/ProtectedRoute';
 import SalesDetails from './components/SalesDetails';
 import CalendarView from './components/CalendarView';
+import ChurnReport from './components/reports/ChurnReport';
+import CustomersReport from './components/reports/CustomersReport';
+import NpsReport from './components/reports/NpsReport';
+import RevenueReport from './components/reports/RevenueReport';
 function App() {
 
   return (
@@ -42,6 +46,10 @@ function App() {
           <Route path="/upgrade" element={<UpgradePlan />} />
           <Route path="/sales" element={<SalesDetails />} />
           <Route path="/calendar" element={<CalendarView />} />
+          <Route path="/reports/revenue" element={<RevenueReport />} />
+          <Route path="/reports/customers" element={<CustomersReport />} />
+          <Route path="/reports/churn" element={<ChurnReport />} />
+          <Route path="/reports/nps" element={<NpsReport />} />
           <Route path="/" element={
             <>
               <Navbar />
